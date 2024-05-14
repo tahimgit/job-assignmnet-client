@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link, useLoaderData } from 'react-router-dom';
 
-const AllTouristSpot = () => {
+const AllJobs = () => {
     const jobData = useLoaderData();
     // const {_id, photo, spotName, countryName, location, cost, seasonality, time, perYear, email, userName, description} = spotData;
 
@@ -30,4 +30,4 @@ const AllTouristSpot = () => {
     );
 };
 
-export default AllTouristSpot;
+export default AllJobs;

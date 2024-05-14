@@ -4,7 +4,6 @@ import Home from "./Home";
 import Logins from "./Logins";
 import Register from "./Register";
 import ErrorPage from "./ErrorPage";
-import AllTouristSpot from "./AllTouristSpot";
 import MyLIst from "./MyLIst";
 import PrivetRout from "./PrivetRout/PrivetRout";
 import Profile from "./PrivetRout/Profile";
@@ -15,6 +14,7 @@ import AppliedJobs from "./AppliedJobs";
 import SavedJobs from "./SavedJobs";
 import Blog from "./Blog";
 import Addjob from "./Addjob";
+import AllJobs from "./AllJobs";
 
 const Router = createBrowserRouter([
   {
@@ -37,7 +37,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "/jobs",
-        element: <AllTouristSpot></AllTouristSpot>,
+        element: <AllJobs></AllJobs>,
         loader: () => fetch("http://localhost:5000/jobs"),
       },
       {
