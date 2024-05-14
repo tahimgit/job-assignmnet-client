@@ -32,8 +32,6 @@ const Navebar = () => {
     }
   };
 
-  console.log(theme);
-
   const handleSignOut = () => {
     logOut()
       .then((result) => {
@@ -68,9 +66,7 @@ const Navebar = () => {
       <li>
         <NavLink to="/blog">Blog</NavLink>
       </li>
-      {/* <li>
-            <NavLink to="/category">Category</NavLink>
-          </li> */}
+     
     </>
   );
 
