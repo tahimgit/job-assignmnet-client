@@ -71,7 +71,7 @@ const SpotDetails = () => {
     }
     else {
       const res = await axios.post('http://localhost:5000/savedjob', postData, {withCredentials: true})
-      // console.log(res)
+     
       if (res.data) {
         Swal.fire({
           position: "top-end",
