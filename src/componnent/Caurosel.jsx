@@ -1,7 +1,5 @@
 import React, { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -35,9 +33,9 @@ export default function AutoCarousel() {
               <div>
                 <h1 className="text-5xl font-bold">Frontend Developer!</h1>
                 <p className="py-6">
-                  Finding a most productive and energetice dev. Who are able to take responsibility for
-                  making interactive UI design and as well as development.We will ensure a comportable 
-                  work environment and compititive salary.
+                  Finding a most productive and energetic dev. Who are able to take responsibility for
+                  making interactive UI design and as well as development.We will ensure a comfortable 
+                  work environment and competitive salary.Besides,we have a recreation room for refreshing minds for our employers.
                 </p>
               </div>
             </div>
@@ -51,11 +49,11 @@ export default function AutoCarousel() {
                 className="max-w-sm h-96 rounded-lg shadow-2xl"
               />
               <div>
-                <h1 className="text-5xl font-bold">Jr Software Develoepr!</h1>
+                <h1 className="text-5xl font-bold">Jr Software Developer!</h1>
                 <p className="py-6">
-                Finding a most productive and energetice Software Engineer. Who are able to take responsibility for
-                  making a robust and highly scalable software.We will ensure a comportable 
-                  work environment and compititive salary.
+                Finding a most productive and energetic Software Engineer. Who are able to take responsibility for
+                  making a robust and highly scalable software.We will ensure a comfortable 
+                  work environment and competitive salary.Besides,we have a recreation room for refreshing minds for our employers.
                 </p>
 
               </div>
@@ -72,9 +70,9 @@ export default function AutoCarousel() {
               <div>
                 <h1 className="text-5xl font-bold">Backend Engineer!</h1>
                 <p className="py-6">
-                Finding a most productive and energetice Software Engineer. Who are able to take responsibility for
-                  making a robust and highly scalable software.We will ensure a comportable 
-                  work environment and compititive salary.
+                Finding a most productive and energetic Software Engineer. Who are able to take responsibility for
+                  making a robust and highly scalable software.We will ensure a comfortable 
+                  work environment and competitive salary.Besides,we have a recreation room for refreshing minds for our employers.
                 </p>
                
               </div>
