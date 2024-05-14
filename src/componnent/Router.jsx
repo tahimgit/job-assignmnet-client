@@ -8,13 +8,13 @@ import AllTouristSpot from "./AllTouristSpot";
 import MyLIst from "./MyLIst";
 import PrivetRout from "./PrivetRout/PrivetRout";
 import Profile from "./PrivetRout/Profile";
-import AddSpot from "./AddSpot";
 import SpotDetails from "./SpotDetails";
 import Update from "./Update";
 import JobTypeCard from "./JobTypeCard";
 import AppliedJobs from "./AppliedJobs";
 import SavedJobs from "./SavedJobs";
 import Blog from "./Blog";
+import Addjob from "./Addjob";
 
 const Router = createBrowserRouter([
   {
@@ -85,7 +85,7 @@ const Router = createBrowserRouter([
         path: "/addjob",
         element: (
           <PrivetRout>
-            <AddSpot></AddSpot>
+            <Addjob></Addjob>
           </PrivetRout>
         ),
       },

@@ -6,7 +6,7 @@ import { useLoaderData } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Datepicker from "react-tailwindcss-datepicker";
-const AddSpot = () => {
+const Addjob = () => {
   const { user, loadding } = useContext(AuthContext);
   const [selectedDate, setSelectedDate] = useState("");
 
@@ -167,4 +167,4 @@ const AddSpot = () => {
   );
 };
 
-export default AddSpot;
+export default Addjob;
