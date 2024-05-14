@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.login .active{
+    background-color: rgb(0, 0, 0);
+    color: orange;
+    font-size: large;
+}
+.delete{
+    display: ;
+}
+
+.listcard:hover .delete{
+    display: block;
+}
+
+.active ul .active{
+    color: red;
+}
