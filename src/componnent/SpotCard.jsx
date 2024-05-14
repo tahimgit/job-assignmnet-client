@@ -6,7 +6,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 const SpotCard = ({ spotData }) => {
-  // console.log(spotData);
+
   const navigate = useNavigate();
   const { user, loadding } = useContext(AuthContext);
   const {
@@ -72,7 +72,7 @@ const SpotCard = ({ spotData }) => {
     }
     else {
       const res = await axios.post('http://localhost:5000/savedjob', postData, {withCredentials: true})
-      // console.log(res)
+      
       if (res.data) {
         Swal.fire({
           position: "top-end",
