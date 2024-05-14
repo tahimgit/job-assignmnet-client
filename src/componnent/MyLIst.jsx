@@ -10,8 +10,6 @@ const MyLIst = () => {
   const [list, setList] = useState([]);
   const [loadding, setLoadding] = useState(true);
 
-  console.log(user.email);
-
   useEffect(() => {
     fetch(`http://localhost:5000/myjobs/${user?.email}`, {
       credentials: "include",
@@ -37,6 +35,7 @@ const MyLIst = () => {
 
   return (
     <div className="min-h-screen text-center">
+      <h1 className="text-4xl text-center">My job List</h1>;
       <div className="">
         {list.map((lists) => (
           <ListCard key={lists._id} list={lists}></ListCard>
@@ -47,4 +46,4 @@ const MyLIst = () => {
 };
 
 export default MyLIst;
-<h1 className="text-4xl">My List</h1>;
+
