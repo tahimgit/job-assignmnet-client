@@ -13,7 +13,6 @@ const JobTypeCard = () => {
         console.log(data);
 
         setCategoryList(data);
-        //    return setLoadding(false)
       });
   }, []);
   return (
