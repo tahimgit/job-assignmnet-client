@@ -5,8 +5,7 @@ import { AuthContext } from "./Authprovider/Authprovider";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const AppliedJobs = ({ spotData }) => {
-  // console.log(spotData);
+const AppliedJobs = ({ }) => {
   const { user, loadding } = useContext(AuthContext);
   const [jobs, setJobs] = useState([]);
 
@@ -17,7 +16,6 @@ const AppliedJobs = ({ spotData }) => {
         console.log(data);
 
         setJobs(data);
-        //    return setLoadding(false)
       });
   }, []);
 
