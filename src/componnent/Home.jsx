@@ -35,18 +35,7 @@ const Home = () => {
         image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/how_to_become_a_software_engineer.jpg"
     }
   ]);
-  // console.log(spotdata);
-  
-  // const [spot, setSpotdata] = useState([]);
   const [con, setCon] = useState(spotdata);
-
-  const handleFilter = (name) => {
-    setCon([]);
-    if (name) {
-      const filtered = con.filter((country) => country?.countryName === name);
-      return setCon(filtered);
-    }
-  };
 
   console.log(con);
   return (
