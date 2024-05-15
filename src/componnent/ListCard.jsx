@@ -3,7 +3,6 @@ import "../index.css";
 import { MdDeleteForever } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { update } from "firebase/database";
 import Swal from "sweetalert2";
 import moment from "moment";
 
