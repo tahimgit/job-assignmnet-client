@@ -54,7 +54,7 @@ const Update = () => {
 
     console.log(updateDate);
 
-    fetch(`http://localhost:5000/job/${_id}`, {
+    fetch(`https://job-assignment-beige.vercel.app/job/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

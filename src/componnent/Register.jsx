@@ -146,7 +146,7 @@ const {createUser,udpateUser, user} = useContext(AuthContext)
             </label>
             <p className="text-red-500">{errorUser}</p>
 
-            <p className="text-gray-600">
+            <p className="text-gray-200">
               Your personal data will be used to support your experience
               throughout this website, to manage access to your account, and for
               other purposes described in our{" "}
@@ -156,13 +156,13 @@ const {createUser,udpateUser, user} = useContext(AuthContext)
             </p>
             <label>
               <input className="mt-4" type="checkbox" name="terms" htmlFor="terms" id="" />{" "}
-              <a>Therms & Condition</a>
+              <a className="text-red-600	">Therms & Condition</a>
               <p className="text-red-500  mb-1 underline">{chacked}</p>
             </label>
 
             <label className="">
               <input
-                className="bg-gray-900 w-full p-2 my-4 font-bold"
+                className="bg-slate-200 w-full p-2 my-4 font-bold"
                 type="submit"
                 value="Sign-up"
                 name=""

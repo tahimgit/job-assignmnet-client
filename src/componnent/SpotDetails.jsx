@@ -40,7 +40,7 @@ const SpotDetails = () => {
       navigate('/login')
     }
     else {
-      const res = await axios.post('http://localhost:5000/appliedjob', postData, {withCredentials: true})
+      const res = await axios.post('https://job-assignment-beige.vercel.app/appliedjob', postData, {withCredentials: true})
       if (res.data) {
         Swal.fire({
           position: "top-end",
@@ -70,7 +70,7 @@ const SpotDetails = () => {
       navigate('/login')
     }
     else {
-      const res = await axios.post('http://localhost:5000/savedjob', postData, {withCredentials: true})
+      const res = await axios.post('https://job-assignment-beige.vercel.app/savedjob', postData, {withCredentials: true})
      
       if (res.data) {
         Swal.fire({

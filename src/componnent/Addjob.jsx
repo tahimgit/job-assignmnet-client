@@ -2,14 +2,14 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "./Authprovider/Authprovider";
 import { data } from "autoprefixer";
 import Swal from "sweetalert2";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Datepicker from "react-tailwindcss-datepicker";
 const Addjob = () => {
   const { user, loadding } = useContext(AuthContext);
   const [selectedDate, setSelectedDate] = useState("");
-
+  const navigate = useNavigate() 
   const handleDateChange = (newValue) => {
     console.log("newValue:", newValue);
     setSelectedDate(newValue);
@@ -45,14 +45,11 @@ const Addjob = () => {
       postedOn: new Date(),
       description,
       salary,
-      userEmail,
       userName,
       vacancyNo,
     };
 
-    console.log(newData);
-
-    fetch("http://localhost:5000/addJob", {
+    fetch("https://job-assignment-beige.vercel.app/addJob", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -63,14 +60,15 @@ const Addjob = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.insertedId) {
+        if (data.insertedjobsId) {
           Swal.fire({
             position: "top-end",
             icon: "success",
-            title: "Your Turists spot addeded successfully",
+            title: "Your job addeded successfully",
             showConfirmButton: false,
             timer: 1500,
           });
+          navigate("/")
         }
       }).catch((err) => {
         console.log(err)

@@ -10,7 +10,7 @@ const SavedJobs = ({ }) => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/savedjobs`, { credentials: "include" })
+    fetch(`https://job-assignment-beige.vercel.app/savedjobs`, { credentials: "include" })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

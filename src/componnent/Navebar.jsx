@@ -32,6 +32,8 @@ const Navebar = () => {
     }
   };
 
+  console.log(theme);
+
   const handleSignOut = () => {
     logOut()
       .then((result) => {
@@ -66,7 +68,9 @@ const Navebar = () => {
       <li>
         <NavLink to="/blog">Blog</NavLink>
       </li>
-     
+      {/* <li>
+            <NavLink to="/category">Category</NavLink>
+          </li> */}
     </>
   );
 
@@ -106,7 +110,7 @@ const Navebar = () => {
           <ul className="gap-8 menu-horizontal px-1">{NavLinks}</ul>
         </div>
 
-        <div className="navbar-end">
+        <div className="navbar-end z-10">
           {!user ? (
             <Link to="/login">
               {" "}
@@ -115,7 +119,7 @@ const Navebar = () => {
           ) : (
             <>
               {/* theme ====================================================================== */}
-              <div className="mr-10">
+              <div className="mr-10 z-10">
                 <label className="swap swap-rotate">
                   {/* this hidden checkbox controls the state */}
                   <input

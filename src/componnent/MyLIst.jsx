@@ -11,7 +11,7 @@ const MyLIst = () => {
   const [loadding, setLoadding] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myjobs/${user?.email}`, {
+    fetch(`https://job-assignment-beige.vercel.app/myjobs/${user?.email}`, {
       credentials: "include",
     })
       .then((res) => res.json())

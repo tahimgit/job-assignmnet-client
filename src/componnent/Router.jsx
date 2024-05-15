@@ -25,7 +25,7 @@ const Router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/trending-jobs"),
+        loader: () => fetch("https://job-assignment-beige.vercel.app/trending-jobs"),
       },
       {
         path: "/login",
@@ -38,7 +38,7 @@ const Router = createBrowserRouter([
       {
         path: "/jobs",
         element: <AllJobs></AllJobs>,
-        loader: () => fetch("http://localhost:5000/jobs"),
+        loader: () => fetch("https://job-assignment-beige.vercel.app/jobs"),
       },
       {
         path: "/category/:id",
@@ -96,7 +96,7 @@ const Router = createBrowserRouter([
             <SpotDetails></SpotDetails>
           </PrivetRout>
         ),
-        loader: () => fetch("http://localhost:5000/jobs"),
+        loader: () => fetch("https://job-assignment-beige.vercel.app/jobs"),
       },
       {
         path: "/update/:id",
@@ -105,7 +105,7 @@ const Router = createBrowserRouter([
             <Update></Update>
           </PrivetRout>
         ),
-        loader: ({ params }) => fetch(`http://localhost:5000/job/${params.id}`),
+        loader: ({ params }) => fetch(`https://job-assignment-beige.vercel.app/job/${params.id}`),
       },
       // {
       //   path: '/category',

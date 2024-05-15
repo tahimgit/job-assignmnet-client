@@ -7,7 +7,7 @@ const JobTypeCard = () => {
   const { id } = useParams();
   const [categoryList, setCategoryList] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/category/${id}`)
+    fetch(`https://job-assignment-beige.vercel.app/category/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

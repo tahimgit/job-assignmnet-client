@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBqaMTkBsMzSM5TcgQKIEX8kEHXfid-Egk",
-  authDomain: "explorer-tourism.firebaseapp.com",
-  projectId: "explorer-tourism",
-  storageBucket: "explorer-tourism.appspot.com",
-  messagingSenderId: "10168366462",
-  appId: "1:10168366462:web:f4134d279b42a675466f2f"
+  apiKey: "AIzaSyDLgo7Pn4udFEE7Ghr5Ny3My_c9WSPkIww",
+  authDomain: "techlink-a417a.firebaseapp.com",
+  projectId: "techlink-a417a",
+  storageBucket: "techlink-a417a.appspot.com",
+  messagingSenderId: "765533679677",
+  appId: "1:765533679677:web:0419b63d39950be6147a54"
 };
 
 // Initialize Firebase

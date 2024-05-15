@@ -4,13 +4,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./Authprovider/Authprovider";
 import axios from "axios";
 import Swal from "sweetalert2";
-
+import { PDFViewer, PDFDownloadLink } from "@react-pdf/renderer";
+import PDFDownload from "./PdfDownload";
 const AppliedJobs = ({ }) => {
   const { user, loadding } = useContext(AuthContext);
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/appliedjobs`, { credentials: "include" })
+    fetch(`https://job-assignment-beige.vercel.app/appliedjobs`, { credentials: "include" })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -20,7 +21,8 @@ const AppliedJobs = ({ }) => {
   }, []);
 
   return (
-    <div className="max-w-[1280px] mx-auto grid grid-cols-3 gap-4">
+    <div>
+      <div className="max-w-[1280px] mx-auto grid grid-cols-3 gap-4">
       {jobs && jobs.map((jb, index) => {
         const {
             _id,
@@ -66,6 +68,18 @@ const AppliedJobs = ({ }) => {
           </div>
         );
       })}
+    </div>
+    <div className="flex flex-center flex-col px-28 my-10">
+        <h1 className="text-2xl text-gray-800 text-centeer py-10">Applied Job Summery</h1>
+        <PDFViewer className="h-96">
+          <PDFDownload jobs={jobs}/>
+        </PDFViewer>
+        <PDFDownloadLink document={<PDFDownload jobs={jobs}/>} fileName="appliedjobs.pdf" className="btn btn-secondary my-2">
+          {({ blob, url, loading, error }) =>
+            loading ? "Loading document..." : "Download now!"
+          }
+        </PDFDownloadLink>
+     </div>
     </div>
   );
 };

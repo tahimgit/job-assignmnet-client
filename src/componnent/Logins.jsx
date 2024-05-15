@@ -14,7 +14,7 @@ const Logins = () => {
   const [showPass, setShowPass] = useState(false);
   const [error, setError] = useState();
   const navigate = useNavigate()
-  const { singIn, signInWithGoogle, handleGithubeSign, loadding } =
+  const { singIn, signInWithGoogle, handleGithubeSign, loadding, setLoadding } =
     useContext(AuthContext);
 
   if (loadding) {
@@ -47,8 +47,9 @@ const Logins = () => {
 
   async function  handleTokenVerify (user) {
     try {
-        const res = await axios.post('http://localhost:5000/token-register', { email: user.email }, {withCredentials: true})
-        console.log(res)
+        const res = await axios.post('https://job-assignment-beige.vercel.app/token-register', { email: user.email }, {withCredentials: true})
+        // console.log(res)
+        setLoadding(false)
         navigate('/')
     }
     catch(error) {
@@ -112,17 +113,17 @@ const Logins = () => {
               </span>
             </label>
             <label>
-              <input className="mt-4" type="checkbox" name="" id="" />{" "}
-              <span>Remember me</span>
+              <input className="mt-4 text-gray-100" type="checkbox" name="" id="" />{" "}
+              <span className="text-gray-100	">Remember me</span>
             </label>
             <label>
-              <p className="text-gray-500 mt-6">
+              <p className="text-gray-100 mt-6">
                 <a href="">Lost Your password?</a>
               </p>
             </label>
             <label className="">
               <input
-                className="bg-gray-900 w-full p-2 my-4 font-bold"
+                className="bg-slate-200 w-full p-2 my-4 font-bold hover:cursor-pointer"
                 type="submit"
                 value="login"
                 name=""
@@ -131,8 +132,8 @@ const Logins = () => {
             </label>
 
             <div className="flex gap-4">
-              <button onClick={handleGoogleSign}>Google</button>
-              <button onClick={handleGiteSign}>Github</button>
+              <button onClick={handleGoogleSign} className="btn btn-warning">Google</button>
+              <button onClick={handleGiteSign} className="btn btn-primary">Github</button>
             </div>
           </form>
           <p className="text-center mb-2 text-red-500 font-bold">{error}</p>

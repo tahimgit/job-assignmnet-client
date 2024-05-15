@@ -24,7 +24,7 @@ export default function AutoCarousel() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="hero min-h-96 bg-base-200">
+          <div className="hero min-h-96 bg-base-200 z-0">
             <div className="hero-content flex-col lg:flex-row">
               <img
                 src="https://static.vecteezy.com/system/resources/thumbnails/001/871/553/small_2x/promotion-to-find-workers-with-the-words-look-and-find-jobs-concept-ilustration-can-use-for-landing-page-template-ui-web-mobile-poster-banner-flyer-background-website-advertisement-free-vector.jpg"
@@ -42,7 +42,7 @@ export default function AutoCarousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="hero min-h-96 bg-base-200">
+          <div className="hero min-h-96 bg-base-200 z-0">
             <div className="hero-content flex-col lg:flex-row">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR85oeB6gnZ7R-nRzunGkOH9galIL7CXD89WYEZFxivXZ1GtDdell4saRj8ypgKr--CcJU&usqp=CAU"
@@ -61,7 +61,7 @@ export default function AutoCarousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="hero min-h-96 bg-base-200">
+          <div className="hero min-h-96 bg-base-200 z-0">
             <div className="hero-content flex-col lg:flex-row">
               <img
                 src="https://us.123rf.com/450wm/artinspiring/artinspiring2104/artinspiring210400343/167056380-job-interview-concept-idea-of-employment-and-hiring-procedure.jpg?ver=6"
